@@ -10,6 +10,8 @@ public class Main {
 		System.out.println(p1);
 	}
 
+	
+
 	private static Date birthdate(String birthdate) {// throws Exception {
 		String dateFormat = "dd.MM.yyyy";
 		try {
