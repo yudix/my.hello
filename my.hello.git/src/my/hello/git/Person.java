@@ -1,5 +1,6 @@
 package my.hello.git;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Person {
@@ -41,9 +42,15 @@ public class Person {
 	public void setID(String iD) {
 		ID = iD;
 	}
-
+//	String newstring = new SimpleDateFormat("dd/MM/yyyy").format(date);
+//	System.out.println(newstring); // 2011-01-18
 	@Override
 	public String toString() {
-		return "Person [name=" + name + ", age=" + age + ", ID=" + ID + "]";
+		return "Person [name=" + name + ", age=" + getAgeFormatter(age) + ", ID=" + ID + "]";
 	}
+
+private String getAgeFormatter(Date age) {
+	 return new SimpleDateFormat("dd/MM/yyyy").format(age);
+	 
+}
 }
